@@ -48,7 +48,7 @@ class SecPage extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 12,
+              height: 4,
             ),
             const Image(
               image: NetworkImage(
@@ -56,7 +56,7 @@ class SecPage extends StatelessWidget {
               width: 200,
               height: 160,
             ),
-            const Spacer(),
+            // const Spacer(),
             const Image(
               image: AssetImage('assets/images/flowerfields_keukenhof_2.jpg'),
               width: 200,
