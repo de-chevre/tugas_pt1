@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tugas_pt1/tugas%201/hal2.dart';
+import 'package:tugas_pt1/tugas2/login.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key, required this.title});
@@ -25,6 +26,13 @@ class _HomeScreen extends State<HomeScreen> {
             },
             child: const Text('Halaman 2'),
           ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const LoginPage()));
+            },
+            child: const Text('Halaman Login'),
+          )
         ]),
       ),
     );
