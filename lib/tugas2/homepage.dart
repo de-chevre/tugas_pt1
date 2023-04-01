@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tugas_pt1/tugas2/page2.dart';
 
 class HomePage extends StatelessWidget {
   // const HomePage({super.key});
@@ -24,34 +25,36 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('FULL COURSE MENU'),
       ),
-      body: SizedBox(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: ListView.builder(
-            scrollDirection: Axis.vertical,
-            physics: const BouncingScrollPhysics(),
-            shrinkWrap: true,
-            itemBuilder: (BuildContext context, index) {
-              return Padding(
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  children: <Widget>[
-                    const SizedBox(
-                      height: 200,
-                      width: 200,
-                    ),
-                    Image.asset(
-                      img[index],
-                      height: 200,
-                      width: 200,
-                    ),
-                  ],
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView.builder(
+          scrollDirection: Axis.vertical,
+          physics: const BouncingScrollPhysics(),
+          shrinkWrap: true,
+          itemCount: img.length,
+          itemBuilder: (BuildContext context, index) {
+            return Column(
+              children: <Widget>[
+                const SizedBox(
+                  height: 8,
                 ),
-              );
-            },
-            itemCount: img.length,
-          ),
+                Image.asset(
+                  img[index],
+                  height: 250,
+                  width: 500,
+                ),
+              ],
+            );
+          },
         ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => NextPage()));
+        },
+        label: const Text('next'),
+        icon: const Icon(Icons.arrow_right),
       ),
     );
   }
