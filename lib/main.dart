@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tugas_pt1/tugas%201/hal1.dart';
+import 'package:tugas_pt1/tugas2/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: const HomeScreen(title: 'Halaman Utama'),
+      home: const LoginPage(),
     );
   }
 }
