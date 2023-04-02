@@ -1,20 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:tugas_pt1/tugas2/food_model.dart';
 import 'package:tugas_pt1/tugas2/page2.dart';
 
 class HomePage extends StatelessWidget {
   // const HomePage({super.key});
 
-  List img = [
-    'assets/images/asparagus.jpg',
-    'assets/images/beans.jpg',
-    'assets/images/beef.jpg',
-    'assets/images/bread.jpg',
-    'assets/images/flat-lay.jpg',
-    'assets/images/fried-rice.jpg',
-    'assets/images/hors-doeuvre.jpg',
-    'assets/images/salmon.jpg',
-    'assets/images/spaghetti.jpg',
-    'assets/images/tacos.jpg',
+  // List img = [
+  //   'assets/images/asparagus.jpg',
+  //   'assets/images/beans.jpg',
+  //   'assets/images/beef.jpg',
+  //   'assets/images/bread.jpg',
+  //   'assets/images/flat-lay.jpg',
+  //   'assets/images/fried-rice.jpg',
+  //   'assets/images/hors-doeuvre.jpg',
+  //   'assets/images/salmon.jpg',
+  //   'assets/images/spaghetti.jpg',
+  //   'assets/images/tacos.jpg',
+  // ];
+
+  final List<FoodModel> food = [
+    FoodModel(
+        image: 'assets/images/asparagus.jpg',
+        title: "Asparagus",
+        price: "Rp. 50.000"),
+    FoodModel(
+        image: 'assets/images/beans.jpg',
+        title: "Asparagus",
+        price: "Rp. 50.000"),
+    FoodModel(
+        image: 'assets/images/salmon.jpg',
+        title: "Asparagus",
+        price: "Rp. 50.000")
   ];
 
   HomePage({super.key});
@@ -31,18 +47,21 @@ class HomePage extends StatelessWidget {
           scrollDirection: Axis.vertical,
           physics: const BouncingScrollPhysics(),
           shrinkWrap: true,
-          itemCount: img.length,
+          itemCount: food.length,
           itemBuilder: (BuildContext context, index) {
+            var fooding = food[index];
             return Column(
               children: <Widget>[
                 const SizedBox(
                   height: 8,
                 ),
                 Image.asset(
-                  img[index],
+                  fooding.image,
                   height: 250,
                   width: 500,
                 ),
+                Text(fooding.title),
+                Text(fooding.price),
               ],
             );
           },
