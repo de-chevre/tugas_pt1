@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class NextPage extends StatelessWidget {
-  // const HomePage({super.key});
-
   List img = [
     'assets/images/asparagus.jpg',
     'assets/images/beans.jpg',

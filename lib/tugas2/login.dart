@@ -16,6 +16,14 @@ class _LoginPage extends State<LoginPage> {
   TextEditingController getPass = TextEditingController();
 
   @override
+  void dispose() {
+    // TODO: implement dispose
+    getUser.dispose();
+    getPass.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
@@ -75,6 +83,8 @@ class _LoginPage extends State<LoginPage> {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => HomePage()));
+                        getUser.clear();
+                        getPass.clear();
                         print(getUser);
                         print(getPass);
                       }
