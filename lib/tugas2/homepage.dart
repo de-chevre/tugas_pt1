@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tugas_pt1/tugas2/food_model.dart';
+import 'package:tugas_pt1/tugas3/food_model.dart';
 import 'package:tugas_pt1/tugas2/page2.dart';
 
 class HomePage extends StatelessWidget {
