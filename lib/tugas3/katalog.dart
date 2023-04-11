@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+import 'package:tugas_pt1/tugas2/homepage.dart';
+import 'package:tugas_pt1/tugas3/new.dart';
 
 class KatalogMenu extends StatefulWidget {
   const KatalogMenu({super.key});
@@ -11,11 +13,11 @@ class KatalogMenu extends StatefulWidget {
 class _KatalogMenu extends State<KatalogMenu> {
   var _currentIndex = 0;
 
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text('Index 0'),
-    Text('Index 1'),
-    Text('Index 2'),
-    Text('Index 3'),
+  static final List<Widget> _widgetOptions = <Widget>[
+    HomePage(),
+    const NewMenu(),
+    const Text('Index 2'),
+    const Text('Index 3'),
   ];
 
   // void _onItemTapped(int index) {
@@ -27,9 +29,9 @@ class _KatalogMenu extends State<KatalogMenu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('KATALOG MENU'),
-      ),
+      // appBar: AppBar(
+      //   title: const Text('KATALOG MENU'),
+      // ),
       body: Center(child: _widgetOptions.elementAt(_currentIndex)),
       bottomNavigationBar: SalomonBottomBar(
           currentIndex: _currentIndex,
