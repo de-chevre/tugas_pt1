@@ -12,10 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Halaman Pertama',
-      theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
-      ),
+      title: 'TUTOR FLUTTER',
+      theme: ThemeData(primarySwatch: Colors.indigo, fontFamily: 'PlayFair'),
       home: const KatalogMenu(),
     );
   }

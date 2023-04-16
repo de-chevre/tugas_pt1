@@ -18,25 +18,35 @@ class _NewMenuState extends State<NewMenu> {
         title: "Asparagus",
         price: "Rp. 50.000"),
     FoodModel(
-        image: 'assets/images/beans.jpg',
-        title: "Asparagus",
-        price: "Rp. 50.000"),
+        image: 'assets/images/beans.jpg', title: "Beans", price: "Rp. 55.000"),
+    FoodModel(
+        image: 'assets/images/beef.jpg', title: "Beef", price: "Rp. 60.000"),
+    FoodModel(
+        image: 'assets/images/bread.jpg', title: "Bread", price: "Rp. 30.000"),
+    FoodModel(
+        image: 'assets/images/flat-lay.jpg',
+        title: "Flat-Lay",
+        price: "Rp. 60.000"),
+    FoodModel(
+        image: 'assets/images/fried-rice.jpg',
+        title: "Fried Rice",
+        price: "Rp. 28.000"),
+    FoodModel(
+        image: 'assets/images/hors-doeuvre.jpg',
+        title: "Hors Doeuvre",
+        price: "Rp. 60.000"),
     FoodModel(
         image: 'assets/images/salmon.jpg',
-        title: "Asparagus",
-        price: "Rp. 50.000"),
+        title: "Salmon",
+        price: "Rp. 60.000"),
     FoodModel(
-        image: 'assets/images/salmon.jpg',
-        title: "Asparagus",
-        price: "Rp. 50.000"),
+        image: 'assets/images/spaghetti.jpg',
+        title: "Spaghetti Carbonara",
+        price: "Rp. 48.000"),
     FoodModel(
-        image: 'assets/images/salmon.jpg',
-        title: "Asparagus",
-        price: "Rp. 50.000"),
-    FoodModel(
-        image: 'assets/images/salmon.jpg',
-        title: "Asparagus",
-        price: "Rp. 50.000"),
+        image: 'assets/images/tacos.jpg',
+        title: "Mexican Tacos",
+        price: "Rp. 25.000"),
   ];
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
@@ -65,7 +75,9 @@ class _NewMenuState extends State<NewMenu> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('FULL COURSE MENU'),
+        title: const Text(
+          'FULL COURSE MENU',
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -87,12 +99,14 @@ class _NewMenuState extends State<NewMenu> {
                         builder: (context) => DetailProduct(
                               image: fooding.image,
                               title: fooding.title,
+                              price: fooding.price,
                             )));
               },
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(25),
+                borderRadius: BorderRadius.circular(0),
                 child: Card(
-                  color: Colors.amber,
+                  // color: const Color.fromARGB(248, 233, 248, 248),
+                  elevation: 10,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -110,7 +124,8 @@ class _NewMenuState extends State<NewMenu> {
                           )
                         ],
                       ),
-                      Text(fooding.title)
+                      Text(fooding.title),
+                      Text(fooding.price),
                     ],
                   ),
                 ),

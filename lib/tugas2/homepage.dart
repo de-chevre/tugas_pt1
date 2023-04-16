@@ -24,13 +24,35 @@ class HomePage extends StatelessWidget {
         title: "Asparagus",
         price: "Rp. 50.000"),
     FoodModel(
-        image: 'assets/images/beans.jpg',
-        title: "Asparagus",
-        price: "Rp. 50.000"),
+        image: 'assets/images/beans.jpg', title: "Beans", price: "Rp. 55.000"),
+    FoodModel(
+        image: 'assets/images/beef.jpg', title: "Beef", price: "Rp. 60.000"),
+    FoodModel(
+        image: 'assets/images/bread.jpg', title: "Bread", price: "Rp. 30.000"),
+    FoodModel(
+        image: 'assets/images/flat-lay.jpg',
+        title: "Flat-Lay",
+        price: "Rp. 60.000"),
+    FoodModel(
+        image: 'assets/images/fried-rice.jpg',
+        title: "Fried Rice",
+        price: "Rp. 28.000"),
+    FoodModel(
+        image: 'assets/images/hors-doeuvre.jpg',
+        title: "Hors Doeuvre",
+        price: "Rp. 60.000"),
     FoodModel(
         image: 'assets/images/salmon.jpg',
-        title: "Asparagus",
-        price: "Rp. 50.000")
+        title: "Salmon",
+        price: "Rp. 60.000"),
+    FoodModel(
+        image: 'assets/images/spaghetti.jpg',
+        title: "Spaghetti Carbonara",
+        price: "Rp. 48.000"),
+    FoodModel(
+        image: 'assets/images/tacos.jpg',
+        title: "Mexican Tacos",
+        price: "Rp. 25.000"),
   ];
 
   HomePage({super.key});

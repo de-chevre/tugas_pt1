@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:tugas_pt1/tugas2/homepage.dart';
+import 'package:tugas_pt1/tugas3/home_cover.dart';
 import 'package:tugas_pt1/tugas3/new.dart';
 
 class KatalogMenu extends StatefulWidget {
@@ -14,7 +15,7 @@ class _KatalogMenu extends State<KatalogMenu> {
   var _currentIndex = 0;
 
   static final List<Widget> _widgetOptions = <Widget>[
-    HomePage(),
+    const HomeCover(),
     const NewMenu(),
     const Text('Index 2'),
     const Text('Index 3'),

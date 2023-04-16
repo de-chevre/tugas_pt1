@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 
 class DetailProduct extends StatelessWidget {
-  const DetailProduct({super.key, required this.image, required this.title});
+  const DetailProduct(
+      {super.key,
+      required this.image,
+      required this.title,
+      required this.price});
   final String image;
   final String title;
+  final String price;
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +21,18 @@ class DetailProduct extends StatelessWidget {
           ),
           Text(
             title,
-            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-          )
+            style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
+                fontFamily: 'PlayFair'),
+          ),
+          Text(
+            price,
+            style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
+                fontFamily: 'PlayFair'),
+          ),
         ],
       ),
     );
